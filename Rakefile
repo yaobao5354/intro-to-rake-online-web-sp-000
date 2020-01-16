@@ -10,6 +10,11 @@ namespace :greeting do
   end
 end
 
+desc 'drop into the pry console'
+task :console => :environment do
+  Pry.start
+end
+
 namespace :db do
   task :environment do
     require_relative './config/environment'
@@ -23,9 +28,4 @@ namespace :db do
   task :seed do
     require_relative './db/seeds.rb'
   end
-end
-
-desc 'drop into the pry console'
-task :console => :environment do
-  Pry.start
 end
