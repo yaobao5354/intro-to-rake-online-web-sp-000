@@ -29,5 +29,3 @@ namespace :db do
     require_relative './db/seeds.rb'
   end
 end
-
-de
